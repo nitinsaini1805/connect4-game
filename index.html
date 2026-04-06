@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Connect Four - GameHub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Top Gradient & Overlay Background Image -->
+  <div class="background"></div>
+
+  <header>
+    <div class="logo">
+      <img src="assets/logo.png" alt="GameHub Logo">
+      <span>GameHUB</span>
+    </div>
+    <h1>Connect Four</h1>
+    <p id="turnIndicator">Player 1's turn (🔴)</p>
+    <div class="controls">
+      <button id="undoBtn">Undo</button>
+      <button id="themeToggle">Toggle Theme</button>
+      <button id="restartBtn">Restart</button>
+    </div>
+  </header>
+
+  <main>
+    <div id="board" class="board"></div>
+    <div id="scoreboard" class="scoreboard">
+      <p>🔴 Red: <span id="scoreRed">0</span></p>
+      <p>🟡 Yellow: <span id="scoreYellow">0</span></p>
+    </div>
+  </main>
+  <!-- Win Message Overlay -->
+<div id="win-message" style="display: none;">
+  <h2 id="winner-text"></h2>
+  <div class="confetti"></div>
+</div>
+
+
+  <footer>
+    <p>Developed by Shreya Singh  &middot; <a href="mailto:shreyasingh23ebkcs116@gmail.com">shreyasingh23ebkcs116@gmail.com</a></p>
+  </footer>
+
+  <!-- Sounds -->
+  <audio id="bgMusic" src="sounds/bg.mp3" loop autoplay></audio>
+  <audio id="dropSound" src="sounds/drop.mp3" preload="auto"></audio>
+  <audio id="winSound" src="sounds/win.mp3" preload="auto"></audio>
+
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+</body>
+</html>
